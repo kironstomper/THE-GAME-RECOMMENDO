@@ -104,10 +104,17 @@ body {
         <div class="form">
             <h2>ENGINE</h2>
           <form class="login-form" method="post">
-            <input type="number" name = "inp" placeholder="Enter a number"/>
+            <input type="number" name = "vall" placeholder="Enter an index number 0 to 2743"/>
             <button class="btn btn-info"><a style="text-decoration: none; color: #ad1c1c;">SUBMIT</a></button>
           </form>
         </div>
+        
+        <div>
+          <span>similar recommendations for the given index</span>
+          {% for i in recommendations %}
+          <p>appid {{ i.appid}}  votes_up {{ i.votes_up}} num_reviews{{ i.num_reviews}}  play_at_review{{ i.play_at_review}} voted_up {{ i.voted_up}} playtime_forever{{ i.playtime_forever}} <br></p>
+      {% endfor %}
+    </div>
       </div>
 <script>
 
